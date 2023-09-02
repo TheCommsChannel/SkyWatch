@@ -6,5 +6,5 @@ The **watchlist.txt** file can contain a list of aircraft by Hex code, N-Number,
 
 There is a section in the code with squawk codes to alert on that can be edited to fit your needs.
 
-## Plane Data Source:
+### Plane Data Source:
 https://github.com/sdr-enthusiasts/plane-alert-db/tree/main
