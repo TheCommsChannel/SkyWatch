@@ -5,3 +5,6 @@ This script is to be used in conjunction with an readsb/tar1090 setup to alert o
 The **watchlist.txt** file can contain a list of aircraft by Hex code, N-Number, Flight ID. You can also use * as a wildcard for picking up any flight starting with whatever you want. (e.g. AAL* will pick up all aircraft with a flight ID starting with AAL)
 
 There is a section in the code with squawk codes to alert on that can be edited to fit your needs.
+
+## Plane Data Source:
+https://github.com/sdr-enthusiasts/plane-alert-db/tree/main
