@@ -6,5 +6,14 @@ The **watchlist.txt** file can contain a list of aircraft by Hex code, N-Number,
 
 There is a section in the code with squawk codes to alert on that can be edited to fit your needs.
 
+### Telegram Bot 
+Open up Telegram and search for "BotFather" and send the command `/newbot` and then follow the prompts for the bot name and username. You'll then be provided with the bot's token to be entered in the `TELEGRAM_BOT_TOKEN` section of the code.
+Next click on the link provided by BotFather, usually `t.me/thebotnamehere`. This will take you to the bot and you can hit start.
+
+Then you can go to the following link for checking the Telegram Chat ID.
+```
+https://api.telegram.org/botYOURBOTTOKENHERE/getUpdates
+```
+
 ### Plane Data Source:
 https://github.com/sdr-enthusiasts/plane-alert-db/tree/main
