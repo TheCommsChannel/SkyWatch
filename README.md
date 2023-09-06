@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B1OZ22Z)
+
 # SkyWatch
 
 This script is to be used in conjunction with an readsb/tar1090 setup to alert on specific aircraft via their Hex code, N-Number, or Flight Name. This has only been tested with the image from adsbexchange.com, but it should work with readsb/tar1090 setup.
