@@ -16,15 +16,21 @@ SQUAWK_MEANINGS = {
     "5400": "NORAD",
     "6100": "NORAD",
     "6400": "NORAD",
+    "7777": "Millitary intercept",
+    "0000": "discrete VFR operations",
     "1277": "Search & Rescue"
 }
 
 
 def load_watchlist():
-    watchlist = []
+    watchlist = {}
     with open("watchlist.txt", "r") as file:
         for line in file:
-            watchlist.append(line.strip().upper())
+            parts = line.split(':', 1)
+            if len(parts) == 2:
+                hex_code = parts[0].strip().upper()
+                label = parts[1].strip()
+                watchlist[hex_code] = label
     return watchlist
 
 
@@ -116,6 +122,7 @@ def main():
                                 message = (
                                     f"Watchlist Alert!\n"
                                     f"Hex: {hex_code}\n"
+                                    f"Label: {watchlist[entry]}\n"
                                     f"Flight: {aircraft.get('flight', 'N/A')}\n"
                                     f"Altitude: {aircraft.get('alt_geom', 'N/A')} ft\n"
                                     f"Ground Speed: {aircraft.get('gs', 'N/A')} knots\n"
@@ -128,6 +135,7 @@ def main():
                                 message = (
                                     f"Watchlist Alert!\n"
                                     f"Hex: {hex_code}\n"
+                                    f"Label: {watchlist[entry]}\n"
                                     f"Flight: {aircraft.get('flight', 'N/A')}\n"
                                     f"Altitude: {aircraft.get('alt_geom', 'N/A')} ft\n"
                                     f"Ground Speed: {aircraft.get('gs', 'N/A')} knots\n"
@@ -149,6 +157,7 @@ def main():
                             message = (
                                 f"Watchlist Alert!\n"
                                 f"Hex: {hex_code}\n"
+                                f"Label: {watchlist[entry]}\n"
                                 f"Flight: {aircraft.get('flight', 'N/A')}\n"
                                 f"Altitude: {aircraft.get('alt_geom', 'N/A')} ft\n"
                                 f"Ground Speed: {aircraft.get('gs', 'N/A')} knots\n"
@@ -160,6 +169,7 @@ def main():
                         else:
                             message = (
                                 f"Watchlist Alert!\nHex: {hex_code}\n"
+                                f"Label: {watchlist[entry]}\n"
                                 f"Flight: {aircraft.get('flight', 'N/A')}\n"
                                 f"Altitude: {aircraft.get('alt_geom', 'N/A')} ft\n"
                                 f"Ground Speed: {aircraft.get('gs', 'N/A')} knots\n"
