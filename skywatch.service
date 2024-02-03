@@ -1,0 +1,14 @@
+[Unit]
+Description=skywatch alert script
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=20
+User=pi
+WorkingDirectory=/home/pi/SkyWatch
+ExecStart=/usr/bin/python3 /home/pi/SkyWatch/skywatch.py
+
+[Install]
+WantedBy=multi-user.target
