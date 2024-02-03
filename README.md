@@ -44,6 +44,12 @@ The service should be started now and should start anytime your device is powere
 sudo systemctl status skywatch.service
 ```
 
+If you need to stop the service, you can run the following:
+
+```bash
+sudo systemctl stop skywatch.service
+```
+
 ###
 
 ### Plane Data Source:
