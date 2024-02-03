@@ -50,6 +50,12 @@ If you need to stop the service, you can run the following:
 sudo systemctl stop skywatch.service
 ```
 
+If you make changes to the watchlist.txt file, you will need to restart the service with the following command:
+
+```bash
+sudo systemctl restart skywatch.service
+```
+
 ###
 
 ### Plane Data Source:
